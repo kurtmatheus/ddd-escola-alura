@@ -9,7 +9,7 @@ public class AlunoMatriculado implements Evento {
 	private final CPF cpfDoAluno;
 	private final LocalDateTime momento;
 	
-	public AlunoMatriculado(CPF cpfDoAluno, LocalDateTime momento) {
+	public AlunoMatriculado(CPF cpfDoAluno) {
 		super();
 		this.cpfDoAluno = cpfDoAluno;
 		this.momento = LocalDateTime.now();
