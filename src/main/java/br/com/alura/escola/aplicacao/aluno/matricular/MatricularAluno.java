@@ -3,7 +3,6 @@ package br.com.alura.escola.aplicacao.aluno.matricular;
 import br.com.alura.escola.dominio.PublicadorDeEvento;
 import br.com.alura.escola.dominio.aluno.Aluno;
 import br.com.alura.escola.dominio.aluno.AlunoMatriculado;
-import br.com.alura.escola.dominio.aluno.CPF;
 import br.com.alura.escola.dominio.aluno.RepositorioDeAlunos;
 
 public class MatricularAluno {
@@ -21,7 +20,7 @@ public class MatricularAluno {
 		Aluno novo = dados.criarAluno();
 		repositorio.matricular(novo);
 		
-		AlunoMatriculado evento = new AlunoMatriculado(new CPF(novo.getCpf()));
+		AlunoMatriculado evento = new AlunoMatriculado(novo.getCpf());
 		this.publicador.publicar(evento);
 	}
 
